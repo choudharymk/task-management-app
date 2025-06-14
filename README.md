@@ -1,5 +1,2 @@
-node_modules/
-.env
-dist/
-coverage/
-*.log
+# task-management-app
+Task Management App
