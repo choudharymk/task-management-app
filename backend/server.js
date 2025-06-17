@@ -10,7 +10,9 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
 const app = express();
 connectDB();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://task-management-app-frontend-o6n3rp43u-choudharymks-projects.vercel.app'
+  }));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
