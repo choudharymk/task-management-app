@@ -5,6 +5,8 @@ const authRoutes = require('./routes/auth');
 const taskRoutes = require('./routes/tasks');
 require('dotenv').config();
 
+console.log('MONGO_URI:', process.env.MONGO_URI);
+
 const app = express();
 connectDB();
 
