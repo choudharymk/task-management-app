@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "https://task-management-app-frontend-khaki.vercel.app",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
