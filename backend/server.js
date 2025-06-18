@@ -10,9 +10,25 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
 const app = express();
 connectDB();
 
-app.use(cors({
-    origin: 'https://task-management-app-frontend-o6n3rp43u-choudharymks-projects.vercel.app'
+const allowedOrigins = [
+    'https://task-management-app-frontend-o6n3rp43u-choudharymks-projects.vercel.app',
+    'https://task-management-app-frontend-pgn9506hn-choudharymks-projects.vercel.app',
+    'https://task-management-app-frontend-choudharymk-choudharymks-projects.vercel.app/',
+    'https://task-management-app-frontend-choudharymks-projects.vercel.app/',
+    'http://localhost:3000'
+  ];
+  app.use(cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true
   }));
+
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
