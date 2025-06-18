@@ -11,9 +11,9 @@ const app = express();
 connectDB();
 
 const allowedOrigins = [
+    'https://task-management-app-frontend-khaki.vercel.app/',
     'https://task-management-app-frontend-o6n3rp43u-choudharymks-projects.vercel.app',
     'https://task-management-app-frontend-pgn9506hn-choudharymks-projects.vercel.app',
-    'https://task-management-app-frontend-choudharymk-choudharymks-projects.vercel.app/',
     'https://task-management-app-frontend-choudharymks-projects.vercel.app/',
     'http://localhost:3000'
   ];
